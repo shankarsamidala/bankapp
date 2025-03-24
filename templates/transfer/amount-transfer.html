@@ -47,7 +47,7 @@
                             <div class="input-area">
                                 <input class="mdr" onkeyup="CalculateBalance()" placeholder="{{request.user.account.account_balance|intcomma}}" type="number" name="amount-send" id="amount-send">
                                 <select>
-                                    <option value="1">PHP</option>
+                                    <option value="1">INR</option>
                                     <option value="2">USD</option>
                                     <option value="3">AUS</option>
                                 </select>
@@ -73,7 +73,7 @@
 
                                 calculated_new_balance = available_balance - send_amount_input;
                                 new_balance.innerHTML = `Resulting Balance:<b>₱${calculated_new_balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</b>`;
-                                total_to_pay.innerHTML = `PHP<b>${send_amount_input.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</b>`;
+                                total_to_pay.innerHTML = `INR<b>${send_amount_input.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</b>`;
 
                                 if (calculated_new_balance < 0){
                                     new_balance.style.color = "red";
@@ -93,7 +93,7 @@
                                 <h5>Total To Pay</h5>
                             </li>
                             <li>
-                                <h5 id="total-to-pay">PHP 0.00</h5>
+                                <h5 id="total-to-pay">INR 0.00</h5>
                             </li>
                         </ul>
                         <div class="footer-area mt-40">

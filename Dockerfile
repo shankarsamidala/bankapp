@@ -25,4 +25,4 @@ COPY . .
 EXPOSE 8003
 
 # Run Django development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8002"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8003"]
